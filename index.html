@@ -19,20 +19,46 @@
           <span></span>
           <span></span>
         </div>
-        <ul class="header__menu">
-          <li class="header__link">Цены</li>
-          <li class="header__link">Автопарк</li>
-          <li class="header__link">Отзывы</li>
-          <li class="header__link">Контакты</li>
+        <ul class="header__menu hidden">
+          <li><a class="header__link" href="#">Цены</a></li>
+          <li><a class="header__link" href="#">Автопарк</a></li>
+          <li><a class="header__link" href="#">Отзывы<a></li>
+          <li><a class="header__link" href="#">Контакты</a></li>
         </ul>
-        <a class="header__phone" href="tel:80299991213">8(029)-999-12-13</a>
+        <a class="header__phone hidden" href="tel:80299991213">8(029)-999-12-13</a>
       </div>
     </div>
   </header>
   <section class="banner">
     <div class="container">
-      <h1 class="banner__title">Квартирные переезды<span>По Бресту и области</span></h1>
+      <div class="banner__inner">
+        <h1 class="banner__title">Квартирные<br>переезды<br>
+          <span class="banner__title banner__title--thin">По Бресту и области</span>
+        </h1>
+        <div class="banner__picture">
+          <img src="/img/доставщик.png">
+        </div>
+        <div class="banner__button">
+          <button type="button" name="order">Заказать</button>
+        </div>
+        <div class="banner__advantages">
+          <div class="banner__advantage">
+            <img src="/img/truck.svg">
+            <p class="banner__text">Более 800 переездов</p>
+          </div>
+          <div class="banner__advantage">
+            <img src="/img/packaging.svg">
+            <p class="banner__text">Бережная<br>упаковка</p>
+          </div>
+          <div class="banner__advantage">
+            <img src="/img/money.svg">
+            <p class="banner__text">Фиксированная цена</p>
+          </div>
+        </div>
+
+      </div>
     </div>
+
   </section>
   <script src="./js/script.js"></script>
 </body>

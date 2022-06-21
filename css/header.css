@@ -1,6 +1,5 @@
 .header {
     background-color: var(--yellow);
-    position: fixed;
     width: 100%;
 }
 
@@ -11,18 +10,34 @@
 
 .header__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    padding: 15px 0;
 }
 
 .header__menu {
+    flex: 0 0 100%;
+}
+
+.header__menu li {
+    padding: 10px 20px;
+}
+
+.header__link {
+    color: var(--light-black);
+    font-size: 1.5rem;
+}
+
+.hidden {
     display: none;
 }
 
 .header__phone {
-    display: none;
+    color: var(--light-black);
+    margin: 0 auto;
 }
+
 
 .header__burger {
     width: 30px;
@@ -93,10 +108,17 @@
 
     .header__menu {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
+        flex: 0;
+        gap: 1rem;
     }
 
     .header__phone {
-        display: block;
+        display: inline-block;
+    }
+
+    .header__phone {
+        font-size: 1.5rem;
+        margin: 0;
     }
 }
