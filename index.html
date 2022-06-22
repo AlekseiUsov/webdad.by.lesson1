@@ -30,13 +30,16 @@
     </div>
   </header>
   <section class="banner">
-    <div class="container">
+    <div class="container container--banner">
       <div class="banner__inner">
         <h1 class="banner__title">Квартирные<br>переезды<br>
           <span class="banner__title banner__title--thin">По Бресту и области</span>
         </h1>
-        <div class="banner__picture">
-          <img src="/img/доставщик.png">
+        <div class="banner__image banner__image--up">
+          <picture>
+            <source srcset="./img/доставщиктаб.png" media="(min-width: 520px)">
+            <img src="./img/доставщик.png">
+          </picture>
         </div>
         <div class="banner__button">
           <button type="button" name="order">Заказать</button>
@@ -44,7 +47,7 @@
         <div class="banner__advantages">
           <div class="banner__advantage">
             <img src="/img/truck.svg">
-            <p class="banner__text">Более 800 переездов</p>
+            <p class="banner__text">Более 800<br>переездов</p>
           </div>
           <div class="banner__advantage">
             <img src="/img/packaging.svg">
@@ -52,10 +55,12 @@
           </div>
           <div class="banner__advantage">
             <img src="/img/money.svg">
-            <p class="banner__text">Фиксированная цена</p>
+            <p class="banner__text">Фиксированная<br>цена</p>
           </div>
         </div>
-
+      </div>
+      <div class="banner__image banner__image--down">
+        <img src="./img/доставщикдесктоп.png">
       </div>
     </div>
 
