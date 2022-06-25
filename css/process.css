@@ -1,0 +1,106 @@
+.procces__content {
+    padding: 4rem 0 2rem;
+}
+
+.process__title {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.proccess__stage {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.proccess__stage::before {
+    content: url('/img/arrow.svg');
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0.5rem;
+    right: -1.1rem;
+    transform: translate(-50%, -50%);
+}
+
+.proccess__inner {
+    padding-left: 0.7rem;
+}
+
+.proccess__number {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 4rem;
+}
+
+.proccess__description {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .procces__content {
+        padding: 4rem 0 13.5rem;
+    }
+
+    .proccess__number {
+        font-size: 5.5rem;
+        line-height: 7rem;
+    }
+
+    .proccess__subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .proccess__stage {
+        align-items: stretch;
+    }
+
+    .proccess__stage::before {
+        display: none;
+    }
+
+    .proccess__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .proccess__description {
+        display: block;
+    }
+
+    .proccess__arrow {
+        display: none;
+    }
+
+    @media (min-width: 1300px) {
+        .procces__content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            padding-bottom: 6rem;
+        }
+
+        .process__title {
+            flex-basis: 100%;
+        }
+
+        .proccess__stage {
+            flex: 1 1 calc((100% / 2) - 2.5rem);
+        }
+
+        .proccess__number {
+            margin-top: -1.5rem;
+            font-size: 3.5rem;
+        }
+
+        .proccess__subtitle {
+            font-size: 1.2rem;
+        }
+    }
+
+}

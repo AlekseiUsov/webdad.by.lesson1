@@ -15,6 +15,10 @@
     padding: 1rem 0;
 }
 
+.header__logo {
+    font-weight: 600;
+}
+
 .header__menu {
     flex: 0 0 100%;
 }
@@ -33,6 +37,8 @@
 }
 
 .header__phone {
+    font-weight: 600;
+    text-decoration: underline;
     color: var(--light-black);
     margin: 0 auto;
 }
@@ -79,7 +85,7 @@
     transform: translateX(0.3rem) translateY(-0.3rem) rotate(-45deg);
 }
 
-@media (min-width: 520px) {
+@media (min-width: 768px) {
     .header__logo {
         font-size: 2rem;
     }
