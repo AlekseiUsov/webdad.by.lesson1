@@ -85,6 +85,9 @@
     }
 
     @media (min-width: 1300px) {
+        .reviews__content {
+            padding: 6rem 0;
+        }
 
         .reviews__block {
             padding-top: 4rem;
