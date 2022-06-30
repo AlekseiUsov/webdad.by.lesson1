@@ -12,12 +12,14 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__inner">
-        <div class="header__logo">MOVEE</div>
-        <div class="header__burger">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="header__content">
+        <div class="header__inner">
+          <div class="header__logo">MOVEE</div>
+          <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <ul class="header__menu hidden">
           <li><a class="header__link" href="#">Цены</a></li>
@@ -25,45 +27,274 @@
           <li><a class="header__link" href="#">Отзывы<a></li>
           <li><a class="header__link" href="#">Контакты</a></li>
         </ul>
-        <a class="header__phone hidden" href="tel:80299991213">8(029)-999-12-13</a>
+        <div class="header__phone hidden" href="tel:80299991213">8(029)-999-12-13</div>
       </div>
     </div>
   </header>
   <section class="banner">
-    <div class="container container--banner">
-      <div class="banner__inner">
-        <h1 class="banner__title">Квартирные<br>переезды<br>
-          <span class="banner__title banner__title--thin">По Бресту и области</span>
-        </h1>
-        <div class="banner__image banner__image--up">
-          <picture>
-            <source srcset="./img/доставщиктаб.png" media="(min-width: 520px)">
-            <img src="./img/доставщик.png">
-          </picture>
-        </div>
-        <div class="banner__button">
-          <button type="button" name="order">Заказать</button>
-        </div>
-        <div class="banner__advantages">
-          <div class="banner__advantage">
-            <img src="/img/truck.svg">
-            <p class="banner__text">Более 800<br>переездов</p>
+    <div class="container">
+      <div class="content__benner">
+        <div class="banner__inner">
+          <h1 class="banner__title">Квартирные<br>переезды<br>
+            <span class="banner__title banner__title--thin">По Бресту и области</span>
+          </h1>
+          <div class="banner__image banner__image--up">
+            <picture>
+              <source srcset="./img/доставщиктаб.png" media="(min-width: 520px)">
+              <img src="./img/доставщик.png">
+            </picture>
           </div>
-          <div class="banner__advantage">
-            <img src="/img/packaging.svg">
-            <p class="banner__text">Бережная<br>упаковка</p>
+          <div class="banner__button">
+            <button type="button" name="order">Заказать</button>
           </div>
-          <div class="banner__advantage">
-            <img src="/img/money.svg">
-            <p class="banner__text">Фиксированная<br>цена</p>
+          <div class="banner__advantages">
+            <div class="banner__advantage">
+              <img src="/img/truck.svg">
+              <p class="banner__text">Более 800<br>переездов</p>
+            </div>
+            <div class="banner__advantage">
+              <img src="/img/packaging.svg">
+              <p class="banner__text">Бережная<br>упаковка</p>
+            </div>
+            <div class="banner__advantage">
+              <img src="/img/money.svg">
+              <p class="banner__text">Фиксированная<br>цена</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="banner__image banner__image--down">
-        <img src="./img/доставщикдесктоп.png">
+        <div class="banner__image banner__image--down">
+          <img src="./img/доставщикдесктоп.png">
+        </div>
       </div>
     </div>
+  </section>
+  <section class="process">
+    <div class="container">
+      <div class="procces__content">
+        <h1 class="process__title">Как это происходит?</h1>
+        <div class="proccess__stage">
+          <div class="proccess__number">01</div>
+          <div class="proccess__inner">
+            <h2 class="proccess__subtitle">Оценка объема предстоящих работ</h2>
+            <p class="proccess__description">Стоимость переезда зависит от количества комнат, вещей и мебели.</p>
+          </div>
+        </div>
+        <div class="proccess__stage">
+          <div class="proccess__number">02</div>
+          <div class="proccess__inner">
+            <h2 class="proccess__subtitle">Упаковка вещей</h2>
+            <p class="proccess__description">Упаковываем вещи в коробки, подписываем. Габаритное и деликатное,
+              упаковываем
+              отдельно.</p>
+          </div>
+        </div>
+        <div class="proccess__stage">
+          <div class="proccess__number">03</div>
+          <div class="proccess__inner">
+            <h2 class="proccess__subtitle">Погрузка и транспортировка вещей</h2>
+            <p class="proccess__description">В нашем автопарке имеются машины, подходящие для мебели любых габаритов.
+            </p>
+          </div>
 
+        </div>
+        <div class="proccess__stage">
+          <div class="proccess__number">04</div>
+          <div class="proccess__inner">
+            <h2 class="proccess__subtitle">Распаковка и расстановка мебели</h2>
+            <p class="proccess__description">Опытные грузчики быстро расставят мебель и уберут мусор от распаковки.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="price">
+    <div class="container">
+      <div class="price__content">
+        <h1 class="price__title">Цены<br>
+          <span class="price__title price__title--thin">Фиксированная стоимость на переезд
+            под ключ</span>
+        </h1>
+        <div class="price__list">
+          <div class="price__item">
+            <h2 class="price__subtitle">1-комнатная кв-ра</h2>
+            <p class="price__text">1 фургон</p>
+            <p class="price__text">2 грузчика</p>
+            <p class="price__text">Переезд за 4 часа</p>
+            <p class="price__price">70 руб.</p>
+            <div class="price__button">
+              <button type="button" name="order">Заказать</button>
+            </div>
+          </div>
+          <div class="price__item price__item--active">
+            <h2 class="price__subtitle">2-комнатная кв-ра</h2>
+            <p class="price__text">1 газель - 3 метра</p>
+            <p class="price__text">2 грузчика</p>
+            <p class="price__text">Переезд за 4 часа</p>
+            <p class="price__price">100 руб.</p>
+            <div class="price__button">
+              <button type="button" name="order">Заказать</button>
+            </div>
+          </div>
+          <div class="price__item">
+            <h2 class="price__subtitle">3-комнатная кв-ра</h2>
+            <p class="price__text">1 газель - 4 метра</p>
+            <p class="price__text">2 грузчика</p>
+            <p class="price__text">Переезд за 6 часа</p>
+            <p class="price__price">150 руб.</p>
+            <div class="price__button">
+              <button type="button" name="order">Заказать</button>
+            </div>
+          </div>
+          <div class="price__link">Все цены</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="fleet">
+    <div class="container">
+      <div class="fleet__content">
+        <h1 class="fleet__title">Автопарк<br>
+          <span class="fleet__title--thin">10 видов автомобилей от 800 кг до 10 тонн</span>
+        </h1>
+        <ul class="fleet__options">
+          <li class="fleet__option fleet__option--active">Газели</li>
+          <li class="fleet__option">Каблуки</li>
+          <li class="fleet__option">Грузовики</li>
+        </ul>
+        <div class="fleet__block">
+          <div class="fleet__slide">
+            <img src="./img/gazel.png">
+          </div>
+          <div class="fleet__inner">
+            <div class="fleet__specifications">
+              <div class="fleet__specification">
+                <h2 class="fleet__subtitle">Газель 3 метра</h2>
+                <p class="fleet__text">Ширина 2 м</p>
+                <p class="fleet__text">Высота 2 м</p>
+                <p class="fleet__text">Объем 16 м³</p>
+                <p class="fleet__text">Грузоподъемность 1,5 т</p>
+              </div>
+            </div>
+            <ul class="fleet__descriptions">
+              <li class="fleet__description fleet__description--active">Газель 3 метра / 1,5 тонны</li>
+              <li class="fleet__description">Газель 4 метра / 2,5 тонны</li>
+              <li class="fleet__description">Газель 5 метра / 3,5 тонны</li>
+            </ul>
+            <div class="fleet__circles">
+              <div class="fleet__circle fleet__circle--active"></div>
+              <div class="fleet__circle"></div>
+              <div class="fleet__circle"></div>
+              <div class="fleet__circle"></div>
+            </div>
+            <div class="fleet__button">
+              <button type="button" name="order">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__content">
+        <h1 class="reviews__title">Отзывы</h1>
+        <div class="reviews__block">
+          <div class="reviews__review">
+            <p class="reviews__name">Ирина</p>
+            <div class="reviews__inner">
+              <p class="reviews__date">24.03.2019</p>
+              <div class="reviews__rating">
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Обращение к вам за помощью в переезде оставило только положительные впечатления. Хотелось отметить
+              замечательного водителя газели Алексея. Были трудности с заездом
+              во двор, он проявил себя как компетентный
+              и профессиональный сотрудник, за что ему огромное...
+            </p>
+            <div class="reviews__view--all">Читать полностью</div>
+          </div>
+          <div class="reviews__review">
+            <p class="reviews__name">Светлана Васильевна</p>
+            <div class="reviews__inner">
+              <p class="review__date">13.09.2019</p>
+              <div class="reviews__rating">
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны, несмотря на то, что к нам опоздали на 1,5
+              часа. Морально были к этому готовы ( в прошлый переезд в другой фирме тоже опоздали на час). Водитель
+              заранее позвонил, предупредил, что задерживается.
+              Когда....
+            </p>
+            <div class="reviews__view--all">Читать полностью</div>
+          </div>
+          <div class="reviews__review">
+            <p class="reviews__name">Ольга Петрова</p>
+            <div class="reviews__inner">
+              <p class="reviews__date">11.11.2019</p>
+              <div class="reviews__rating">
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+                <div class="reviews__star">
+                  <img src="/img/star.svg">
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Могу на 100% порекомендовать компанию MOVEE и отметить, что цены фиксированы,
+              что упрощает расчет. Безо всяких заморочек,
+              в отличии от их конкурентов. Упаковали все качественно и быстро. Все вещи приехали в сохранности. Особая
+              благодарность
+              Александру за его...
+            </p>
+            <div class="reviews__view--all">Читать полностью</div>
+          </div>
+        </div>
+        <div class="reviews__button">
+          <button type="button" name="order">Все отзывы</button>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="./js/script.js"></script>
 </body>

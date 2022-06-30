@@ -1,8 +1,10 @@
 .banner {
     background-color: var(--yellow);
-    padding-bottom: 2.5px;
 }
 
+.content__benner {
+    padding-bottom: 2rem;
+}
 
 .banner__title {
     font-weight: 700;
@@ -21,7 +23,6 @@
     max-width: 30rem;
     display: block;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .banner__image img {
@@ -33,26 +34,37 @@
     display: none;
 }
 
+
 .banner__button {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    width: 17.5rem;
+    background-color: var(--red);
 }
 
+
 .banner__button button {
-    width: 18rem;
     background-color: var(--red);
+    color: var(--white);
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--white);
     padding: 1rem 2rem;
     line-height: 1rem;
+    cursor: pointer;
+
 }
+
 
 .banner__advantages {
     display: none;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 768px) {
+    .content__benner {
+        padding-bottom: 2.5rem;
+    }
+
     .banner__title {
         font-size: 3.5rem;
         line-height: 3.5rem;
@@ -63,15 +75,17 @@
         font-size: 2rem;
     }
 
-    .banner__button button {
-        width: 23.5rem;
-        font-size: 2rem;
-        line-height: 1rem;
+    .banner__button {
         box-shadow: 5px 5px 0px 0px rgb(255, 255, 255);
     }
 
+    .banner__button button {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1rem;
+    }
+
     .banner__advantages {
-        order: 4;
         display: flex;
         align-items: center;
         padding-top: 3rem;
@@ -98,25 +112,38 @@
             display: none;
         }
 
-        .container--banner {
+        .content__benner {
             display: flex;
+            padding-bottom: 0;
         }
 
         .banner__inner {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .banner__button {
+            margin: 2rem 0 0 0;
+        }
+
+        .banner__button button {
+            width: 18rem;
+            font-size: 1.1rem;
         }
 
         .banner__image--down {
-            margin-top: -4rem;
+            margin-top: -4.5rem;
             display: block;
             flex: 0 1 50%;
         }
 
         .banner__title {
             text-align: start;
+        }
+
+        .banner__advantages {
+            padding-top: 5rem;
         }
     }
 }
