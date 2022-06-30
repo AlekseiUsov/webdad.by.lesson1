@@ -1,0 +1,122 @@
+.banner {
+    background-color: var(--yellow);
+    padding-bottom: 2.5px;
+}
+
+
+.banner__title {
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1.8rem;
+}
+
+.banner__title--thin {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.banner__image {
+    width: 100%;
+    max-width: 30rem;
+    display: block;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.banner__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner__image--down {
+    display: none;
+}
+
+.banner__button {
+    display: flex;
+    justify-content: center;
+}
+
+.banner__button button {
+    width: 18rem;
+    background-color: var(--red);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 1rem 2rem;
+    line-height: 1rem;
+}
+
+.banner__advantages {
+    display: none;
+}
+
+@media (min-width: 520px) {
+    .banner__title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    .banner__title--thin {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .banner__button button {
+        width: 23.5rem;
+        font-size: 2rem;
+        line-height: 1rem;
+        box-shadow: 5px 5px 0px 0px rgb(255, 255, 255);
+    }
+
+    .banner__advantages {
+        order: 4;
+        display: flex;
+        align-items: center;
+        padding-top: 3rem;
+    }
+
+    .banner__advantage {
+        display: flex;
+        gap: 0.5rem;
+        flex: 0 0 33%;
+    }
+
+    .banner__advantages img {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .banner__text {
+        font-weight: 400;
+    }
+
+    @media (min-width: 1300px) {
+        .banner__image--up {
+            display: none;
+        }
+
+        .container--banner {
+            display: flex;
+        }
+
+        .banner__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .banner__image--down {
+            margin-top: -4rem;
+            display: block;
+            flex: 0 1 50%;
+        }
+
+        .banner__title {
+            text-align: start;
+        }
+    }
+}
