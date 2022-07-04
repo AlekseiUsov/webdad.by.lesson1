@@ -1,0 +1,37 @@
+.map__map iframe {
+    left: 0;
+    top: 0;
+    height: 30rem;
+    width: 100%;
+}
+
+.map__info {
+    padding: 2rem 0;
+}
+
+.map__text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.map__text-email {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+
+    .map__text {
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .map__info {
+        display: none;
+    }
+}

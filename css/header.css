@@ -1,15 +1,22 @@
 .header {
     background-color: var(--yellow);
+    display: inline-block;
     width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
 }
 
-.white {
+.header--active {
     background-color: var(--white);
     transition: 1s;
+    overflow: hidden;
+    height: 100%;
 }
 
 .header__inner {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
@@ -97,10 +104,20 @@
 }
 
 @media (min-width: 1300px) {
+    .header {
+        padding-top: 1.5rem;
+        height: 5rem;
+    }
+
     .header__content {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+    }
+
+    .header__inner {
+        padding: 0;
+        width: auto;
     }
 
     .header__logo {
@@ -129,6 +146,7 @@
     }
 
     .header__phone {
+        padding: 0;
         display: inline-block;
     }
 

@@ -33,7 +33,7 @@
   </header>
   <section class="banner">
     <div class="container">
-      <div class="content__benner">
+      <div class="banner__content">
         <div class="banner__inner">
           <h1 class="banner__title">Квартирные<br>переезды<br>
             <span class="banner__title banner__title--thin">По Бресту и области</span>
@@ -292,6 +292,138 @@
         </div>
         <div class="reviews__button">
           <button type="button" name="order">Все отзывы</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="form">
+    <div class="container">
+      <div class="form__content">
+        <h1 class="form__title">Закажи переезд прямо сейчас</h1>
+        <h2 class="form__subtitle">Мы перезвоним в течении 10 секунд</h2>
+        <form action="#" method="post">
+          <div class="form__inputs">
+            <input class="form__input" type="text" name="user__name" placeholder="Ваше имя">
+            <input class="form__input" type="number" name="user__phone" placeholder="Ваш телефон">
+          </div>
+          <div class="form__inner">
+            <div class="form__select-wrapper">
+              <div class="form__select">
+                <h2 class="form__select-title">Укажите область</h2>
+                <select>
+                  <option disabled selected hidden class="form__option">Например: Минская</option>
+                  <option>Минская</option>
+                  <option>Бресткая</option>
+                  <option>Гомельская</option>
+                </select>
+              </div>
+              <div class="form__select">
+                <h2 class="form__select-title">Укажите город</h2>
+                <select class="form__select-select">
+                  <option>Мозырь</option>
+                  <option>Минская</option>
+                  <option>Бресткая</option>
+                  <option>Гомельская</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__radios">
+              <h2 class="form__radios-title">Способ оплаты</h2>
+              <div class="form__radio">
+                <input id="cash" type="radio" name="radio" value="1" checked>
+                <label for="cash">Наличными курьеру</label>
+              </div>
+              <div class="form__radio">
+                <input id="by__card" type="radio" name="radio" value="2">
+                <label for="by__card">Картой курьеру</label>
+              </div>
+              <div class="form__radio">
+                <input id="banking" type="radio" name="radio" value="3">
+                <label for="banking">Банковский перевод</label>
+              </div>
+            </div>
+            <div class="form__checkboxes">
+              <h2 class="form__checkboxes-title">Дополнительные услуги</h2>
+              <div class="form__checkbox">
+                <input type="checkbox" name="payment__method" id="1">
+                <label for="1">Вызов замерщика</label>
+              </div>
+              <div class="form__checkbox">
+                <input type="checkbox" name="payment__method" id="2">
+                <label for="2">Упаковка для хрупких предметов</label>
+              </div>
+              <div class="form__checkbox">
+                <input type="checkbox" name="payment__method" id="3">
+                <label for="3">Кран</label>
+              </div>
+              <div class="form__checkbox">
+                <input type="checkbox" name="payment__method" id="4">
+                <label for="4">Сборка мебели</label>
+              </div>
+              <div class="form__checkbox">
+                <input type="checkbox" name="payment__method" id="5">
+                <label for="5">Крупногабаритные предметы</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__offer">
+            <div class="form__timer">05:37:25</div>
+            <div class="form__button">
+              <button type="button" name="order">Заказать со скидкой</button>
+            </div>
+            <div class="form__accept">
+              <input type="checkbox" id="form__accept-checkbox">
+              <label class="form__accept-checkbox" for="form__accept-checkbox">Даю согласие на обработку
+                данных</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <div class="map__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3789165693024!2d23.694600315618356!3d52.09103517568284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGCLCDQkdC10LvQsNGA0YPRgdGM!5e0!3m2!1sru!2sru!4v1656771928325!5m2!1sru!2sru"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container">
+      <div class="map__info">
+        <p class="map__text">Брест</p>
+        <p class="map__text">8 (029)-999-12-13</p>
+        <p class="map__text map__text-email">hello@movee.ru</p>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__block">
+          <h1 class="footer__title">MOVEE</h1>
+          <p class="footer__text">Политика<br>конфиденциальности</p>
+          <p class="footer__text">Соглашение на обработку<br>персональных данных</p>
+        </div>
+        <div class="footer__block">
+          <ul class="footer__menu">
+            <li><a class="footer__link" href="#">Главная</a></li>
+            <li><a class="footer__link" href="#">Цены</a></li>
+            <li><a class="footer__link" href="#">Автопарк</a></li>
+            <li><a class="footer__link" href="#">Отзывы<a></li>
+            <li><a class="footer__link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__block footer__block-social">
+          <ul class="footer__social">
+            <li><a class="footer__social-item" href="#"><img src="./img/youtube.svg"></a></li>
+            <li><a class="footer__social-item" href="#"><img src="./img/вк.svg"></a></li>
+            <li><a class="footer__social-item" href="#"><img src="/img/fb.svg"></a></li>
+            <li><a class="footer__social-item" href="#"><img src="/img/inst.svg"></a></li>
+          </ul>
+          <a class="footer__phone" href="tel:+7 (029)-999-12-13" class="footer__phone">8 (029)-999-12-13</a>
+          <div class="footer__button">
+            <button type="button" name="order">Обратный звонок</button>
+          </div>
         </div>
       </div>
     </div>

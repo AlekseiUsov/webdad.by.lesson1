@@ -9,6 +9,7 @@
 .reviews__block {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     gap: 1rem;
 }
 
@@ -91,6 +92,7 @@
 
         .reviews__block {
             padding-top: 4rem;
+            overflow-x: hidden;
         }
 
         .reviews__review {
