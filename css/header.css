@@ -4,13 +4,13 @@
     width: 100%;
     position: fixed;
     z-index: 3;
+    transition: 0.5s;
     top: 0px;
 }
 
 .header--active {
     background-color: var(--white);
     transition: 1s;
-    overflow: hidden;
     height: 100%;
 }
 
@@ -100,6 +100,30 @@
     .header__burger {
         width: 2.2rem;
         height: 2rem;
+    }
+
+    .header--active {
+        position: fixed;
+        top: 0;
+        right: -1rem;
+        width: 40%;
+        height: 100%;
+        border-radius: 5%;
+        background-color: var(--white);
+        transition: 1s;
+    }
+
+    .header--active .header__logo {
+        display: none;
+    }
+
+    .header--active .header__inner {
+        justify-content: flex-end;
+    }
+
+    .header--active .header__phone {
+        font-weight: 500;
+        font-size: 1.5rem;
     }
 }
 

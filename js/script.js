@@ -3,6 +3,7 @@ let header = document.querySelector('.header');
 let menu = document.querySelector('.header__menu');
 let phone = document.querySelector('.header__phone');
 let body = document.querySelector('body');
+let headerLinks = document.querySelectorAll('.header__link');
 
 headerBurger.addEventListener('click', function () {
     headerBurger.classList.toggle('active');
@@ -10,4 +11,10 @@ headerBurger.addEventListener('click', function () {
     body.classList.toggle('body__noscroll');
     menu.classList.toggle('hidden');
     phone.classList.toggle('hidden');
+});
+
+headerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+
+    })
 });
