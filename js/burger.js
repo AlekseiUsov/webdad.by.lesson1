@@ -13,21 +13,14 @@ function toggle() {
     phone.classList.toggle('hidden');
 }
 
-headerBurger.addEventListener('click', () => {
-    toggle();
-})
+headerBurger.addEventListener('click', toggle);
 
-headerLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        toggle();
-    })
-})
-
-/* body.addEventListener('click', () => {
-    if (header.classList.contains('header--active')) {
+header.addEventListener('click', function (event) {
+    if (event.target.closest('.header__link')) {
         toggle();
     }
-}) */
+});
+
 
 
 

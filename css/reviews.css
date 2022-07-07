@@ -48,6 +48,10 @@
     line-height: 1.5rem;
 }
 
+.reviews__text-hidden {
+    display: none;
+}
+
 .reviews__view--all {
     padding-top: 1rem;
     text-decoration: underline;
