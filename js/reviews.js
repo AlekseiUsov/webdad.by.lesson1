@@ -12,10 +12,11 @@ reviews.addEventListener('click', (event) => {
         let textEndReview = endReview.innerHTML;
 
         let textAllReview = textStartReview.replace('...', ' ');
-        textAllReview = [textStartReview, textEndReview].join(' ');
+        textAllReview = [textAllReview, textEndReview].join(' ');
 
         const allReview = document.createElement('p');
         allReview.innerHTML = textAllReview;
+        console.log(allReview)
     }
 });
 
