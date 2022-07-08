@@ -4,7 +4,7 @@ const formCheckboxTitle = document.querySelector('.form__checkboxes-title');
 
 const toggleExtraServices = (event) => {
     for (let i = 0; i < checkboxes.length; i += 1) {
-        checkboxes[i].classList.toggle('form__checkbox-active');
+        checkboxes[i].classList.toggle('form__checkbox-hidden');
         formCheckboxTitle.classList.toggle('form__checkboxes-title-active')
     }
 }
