@@ -1,22 +1,20 @@
-let reviews = document.querySelector('.reviews');
+const reviews = document.querySelector('.reviews');
+const buttons = document.querySelectorAll('.reviews__view--all');
 
-reviews.addEventListener('click', (event) => {
-    if (event.target.closest('.reviews__view--all')) {
-        const button = event.target.parentElement;
-        const review = button.parentElement;
+const openReview = (event) => {
+    const el = event.target;
+    const button = el.parentElement;
+    const blockReview = button.parentElement;
+    const textReview = blockReview.querySelector('.reviews__wrapper-text');
 
-        let startReview = review.querySelector('.reviews__text');
-        let endReview = review.querySelector('.reviews__text-hidden');
-
-        let textStartReview = startReview.innerHTML;
-        let textEndReview = endReview.innerHTML;
-
-        let textAllReview = textStartReview.replace('...', ' ');
-        textAllReview = [textAllReview, textEndReview].join(' ');
-
-        const allReview = document.createElement('p');
-        allReview.innerHTML = textAllReview;
-        console.log(allReview)
+    for (let i = 0; i < buttons.length; i += 1) {
+        if (buttons[i] === button) {
+            button.classList.toggle('reviews__view--all-active');
+            textReview.classList.toggle('reviews__wrapper-text-active');
+        }
     }
-});
+}
+
+reviews.addEventListener('click', openReview);
+
 

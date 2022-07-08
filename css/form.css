@@ -200,12 +200,43 @@
         padding: 0 0 2.25rem;
     }
 
-    .form__checkboxes-title {
+    .form__checkbox-active {
+        display: none;
+    }
+
+    .form__checkboxes-title-wrapper {
         flex-basis: 100%;
+        display: flex;
+    }
+
+    .form__checkboxes-title {
+        display: inline-block;
+        position: relative;
         font-weight: 700;
         font-size: 1.2rem;
         line-height: 1.4rem;
         padding-bottom: 1rem;
+    }
+
+    .form__checkboxes-title::after {
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        content: '';
+        position: absolute;
+        top: 17.5%;
+        right: -4rem;
+        transform: translateX(-180%);
+        transition: 1s;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0.5rem 0.5rem 0 0.5rem;
+        border-color: #3333 transparent transparent transparent;
+    }
+
+    .form__checkboxes-title-active .form__checkboxes-title::after {
+        transition: 1s;
+        transform: translateX(180%);
     }
 
     .form__checkbox input[type=checkbox] {
@@ -238,7 +269,6 @@
     .form__checkbox input[type=checkbox]:hover+label::before {
         border: 1px solid #FED100;
     }
-
 
     .form__checkbox input[type=checkbox]:checked+label::before {
         background-image: url(/img/чекбокс__галочка.svg);

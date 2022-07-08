@@ -11,6 +11,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     gap: 1rem;
+    padding-bottom: 2rem;
 }
 
 .reviews__review {
@@ -48,8 +49,20 @@
     line-height: 1.5rem;
 }
 
-.reviews__text-hidden {
+.reviews__wrapper-text p:first-child {
+    display: block;
+}
+
+.reviews__wrapper-text p:last-child {
     display: none;
+}
+
+.reviews__wrapper-text-active p:first-child {
+    display: none;
+}
+
+.reviews__wrapper-text-active p:last-child {
+    display: block;
 }
 
 .reviews__view--all {
