@@ -7,10 +7,6 @@
     padding-bottom: 2rem;
 }
 
-.body__noscroll {
-    overflow-y: hidden;
-}
-
 .banner__title {
     font-weight: 700;
     text-align: center;

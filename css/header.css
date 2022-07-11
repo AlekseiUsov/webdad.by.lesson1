@@ -7,6 +7,10 @@
     top: 0px;
 }
 
+.body__noscroll {
+    overflow-y: hidden;
+}
+
 .header--active {
     background-color: var(--white);
     transition: 1s;
@@ -36,6 +40,10 @@
 .header__link {
     color: var(--light-black);
     font-size: 1.5rem;
+}
+
+.header__link:hover {
+    opacity: 0.9;
 }
 
 .hidden {
@@ -128,9 +136,30 @@
 }
 
 @media (min-width: 1300px) {
+    .body__noscroll {
+        overflow-y: auto;
+    }
+
     .header {
         padding-top: 1.5rem;
         height: 5rem;
+    }
+
+    .header--active {
+        background-color: var(--yellow);
+        display: inline-block;
+        width: 100%;
+        height: 5rem;
+        position: fixed;
+        z-index: 3;
+        top: 0px;
+        right: 0;
+        border: none;
+        border-radius: 0%;
+    }
+
+    .header--active .header__logo {
+        display: block;
     }
 
     .header__content {

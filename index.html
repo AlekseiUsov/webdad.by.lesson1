@@ -23,7 +23,7 @@
         </div>
         <ul class="header__menu hidden">
           <li><a class="header__link" href="#price">Цены</a></li>
-          <li><a class="header__link" href="#fleet">Автопарк</a></li>
+          <li><a class="header__link" href="#slider">Автопарк</a></li>
           <li><a class="header__link" href="#reviews">Отзывы<a></li>
           <li><a class="header__link" href="#map">Контакты</a></li>
         </ul>
@@ -149,46 +149,65 @@
       </div>
     </div>
   </section>
-  <section class="fleet" id="fleet">
+  <section class="slider" id="slider">
     <div class="container">
-      <div class="fleet__content">
-        <h1 class="fleet__title">Автопарк<br>
-          <span class="fleet__title--thin">10 видов автомобилей от 800 кг до 10 тонн</span>
+      <div class="slider__content">
+        <h1 class="slider__title">Автопарк<br>
+          <span class="slider__title--thin">10 видов автомобилей от 800 кг до 10 тонн</span>
         </h1>
-        <ul class="fleet__options">
-          <li class="fleet__option fleet__option--active">Газели</li>
-          <li class="fleet__option">Каблуки</li>
-          <li class="fleet__option">Грузовики</li>
+        <ul class="slider__options">
+          <li class="slider__option slider__option-active">Газели</li>
+          <li class="slider__option">Каблуки</li>
+          <li class="slider__option">Грузовики</li>
         </ul>
-        <div class="fleet__block">
-          <div class="fleet__slide">
-            <img src="./img/gazel.png">
+        <div class="slider__slides">
+          <div class="slider__slide slider__slide-active">
+            <div class="slider__image">
+              <img src="./img/gazel.png">
+            </div>
+            <div class="slider__inner">
+              <h2 class="slider__subtitle">Газель 3 метра</h2>
+              <p class="slider__text">Ширина 2 м</p>
+              <p class="slider__text">Высота 2 м</p>
+              <p class="slider__text">Объем 16 м³</p>
+              <p class="slider__text">Грузоподъемность 1,5 т</p>
+            </div>
+            <p class="slider__description">Газель 3 метра / 1.5 тонны</p>
           </div>
-          <div class="fleet__inner">
-            <div class="fleet__specifications">
-              <div class="fleet__specification">
-                <h2 class="fleet__subtitle">Газель 3 метра</h2>
-                <p class="fleet__text">Ширина 2 м</p>
-                <p class="fleet__text">Высота 2 м</p>
-                <p class="fleet__text">Объем 16 м³</p>
-                <p class="fleet__text">Грузоподъемность 1,5 т</p>
-              </div>
+          <div class="slider__slide">
+            <div class="slider__image">
+              <img src="./img/каблук.png">
             </div>
-            <ul class="fleet__descriptions">
-              <li class="fleet__description fleet__description--active">Газель 3 метра / 1,5 тонны</li>
-              <li class="fleet__description">Газель 4 метра / 2,5 тонны</li>
-              <li class="fleet__description">Газель 5 метра / 3,5 тонны</li>
-            </ul>
-            <div class="fleet__circles">
-              <div class="fleet__circle fleet__circle--active"></div>
-              <div class="fleet__circle"></div>
-              <div class="fleet__circle"></div>
-              <div class="fleet__circle"></div>
+            <div class="slider__inner">
+              <h2 class="slider__subtitle">Каблук 2 метра</h2>
+              <p class="slider__text">Ширина 1.8 м</p>
+              <p class="slider__text">Высота 1.2 м</p>
+              <p class="slider__text">Объем 8 м³</p>
+              <p class="slider__text">Грузоподъемность 0.8 т</p>
             </div>
-            <div class="fleet__button">
-              <button type="button" name="order">Заказать</button>
-            </div>
+            <p class="slider__description">Каблук 2 метра / 0.8 тонны</p>
           </div>
+          <div class="slider__slide">
+            <div class="slider__image">
+              <img src="./img/грузовик.png">
+            </div>
+            <div class="slider__inner">
+              <h2 class="slider__subtitle">Грузовик 3 метра</h2>
+              <p class="slider__text">Ширина 3 м</p>
+              <p class="slider__text">Высота 3 м</p>
+              <p class="slider__text">Объем 20 м³</p>
+              <p class="slider__text">Грузоподъемность 2 т</p>
+            </div>
+            <p class="slider__description">Грузовик 3 метра / 2 тонны</p>
+          </div>
+        </div>
+        <div class="slider__circles">
+          <div class="slider__circle slider__circle--active"></div>
+          <div class="slider__circle"></div>
+          <div class="slider__circle"></div>
+        </div>
+        <div class="slider__button">
+          <button type="button" name="order">Заказать</button>
         </div>
       </div>
     </div>
@@ -471,6 +490,7 @@
   <script src="./js/burger.js"></script>
   <script src="./js/reviews.js"></script>
   <script src="./js/extraServices.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
 
 </html>

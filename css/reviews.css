@@ -68,6 +68,7 @@
 .reviews__view--all {
     padding-top: 1rem;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .reviews__view--all span:last-child {
