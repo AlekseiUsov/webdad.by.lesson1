@@ -1,6 +1,5 @@
 .price__item {
     display: none;
-
 }
 
 .price__item--active {
@@ -115,8 +114,18 @@
         border: 1px solid #EBEBEB;
     }
 
-    .price__item--active {
-        border: 1px solid #FED100;
+    .price__item:hover {
+        box-shadow: 0px 12px 25px 0px rgba(0, 0, 0, 0.15)
+    }
+
+    .price__item:active .price__button {
+        margin-top: 2.5rem;
+        padding-top: 0;
+        box-shadow: 0px 4px 24px 0px rgba(254, 209, 0, 1);
+    }
+
+    .price__item:active .price__button button {
+        color: #fff;
     }
 
     .price__link {
