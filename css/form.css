@@ -216,6 +216,7 @@
         font-size: 1.2rem;
         line-height: 1.4rem;
         padding-bottom: 1rem;
+        cursor: pointer;
     }
 
     .form__checkboxes-title::after {
@@ -232,6 +233,11 @@
         border-width: 0.5rem 0.5rem 0 0.5rem;
         border-color: #3333 transparent transparent transparent;
     }
+
+    .form__checkboxes-title:hover.form__checkboxes-title::after {
+        border-color: rgba(15, 14, 14, 0.5) transparent transparent transparent;
+    }
+
 
     .form__checkboxes-title.form__checkboxes-title-active::after {
         transform: rotate(-180deg);
