@@ -27,6 +27,16 @@
     border-bottom: 1px solid #3333;
 }
 
+.form__input-valid {
+    transition: 1s;
+    border-bottom: 2px solid rgb(48, 221, 48);
+}
+
+.form__input-invalid {
+    transition: 1s;
+    border-bottom: 2px solid rgb(205, 19, 19);
+}
+
 .form__timer {
     display: none;
 }
@@ -57,12 +67,68 @@
     gap: 0.5rem;
 }
 
-.form__accept-checkbox {
+.form__accept input {
+    appearance: none;
+}
+
+.form__accept label {
+    margin-left: 1.5rem;
+    position: relative;
     font-weight: 400;
     font-size: 12px;
     line-height: 1rem;
     text-align: center;
 }
+
+.form__accept label::after {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    border: 1px solid #333;
+}
+
+.form__accept input[type=checkbox]:hover+label::after {
+    box-shadow: 1px 1px 1px 1px #333;
+}
+
+.form__accept input[type=checkbox]:checked+label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    left: -1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 3s;
+    border-radius: 10%;
+    background-color: #333;
+}
+
+.form__accept-invalid label {
+    color: rgb(205, 19, 19);
+}
+
+.form__accept-invalid input[type=checkbox]:checked+label::after {
+    transition: 1s;
+    border: 1px solid #333;
+}
+
+.form__accept-invalid input[type=checkbox]:checked+label {
+    color: #333;
+}
+
+.form__accept-invalid input[type=checkbox]+label::after {
+    transition: 1s;
+    border: 1px solid rgb(205, 19, 19);
+}
+
 
 @media (min-width: 768px) {
     .form__content {
@@ -99,12 +165,12 @@
     }
 
     .form__select select {
+        appearance: none;
         width: 100%;
         padding: 1.25rem 0;
         cursor: pointer;
-        border: none;
+        border-color: rgba(51, 51, 51, 0.4);
         background-color: transparent;
-        appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
     }
@@ -116,12 +182,16 @@
         height: 0.5rem;
         content: '';
         top: 70%;
-        left: 100%;
-        transform: translateX(-180%);
+        right: 0;
+        transition: 0.5s;
         pointer-events: none;
         border-style: solid;
         border-width: 0.5rem 0.5rem 0 0.5rem;
         border-color: #3333 transparent transparent transparent;
+    }
+
+    .form__select-active.form__select::after {
+        transform: rotate(180deg);
     }
 
     .form__radios {
@@ -312,7 +382,7 @@
 
     .form__timer {
         grid-area: timer;
-        font-size: 6rem;
+        font-size: 5.5rem;
         font-weight: 400;
         display: block;
     }
@@ -322,6 +392,7 @@
     }
 
     .form__button {
+        margin: 0;
         grid-area: button;
     }
 

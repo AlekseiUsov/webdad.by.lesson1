@@ -363,8 +363,10 @@
         <h2 class="form__subtitle">Мы перезвоним в течении 10 секунд</h2>
         <form action="#" method="post">
           <div class="form__inputs">
-            <input class="form__input" type="text" name="user__name" placeholder="Ваше имя">
-            <input class="form__input" type="number" name="user__phone" placeholder="Ваш телефон">
+            <input class="form__input" id="phone" type="text" name="user__name" placeholder="Ваше имя (кириллица)"
+              data-reg="^[а-яА-Я][а-яА-Я0-9-_\.]{1,20}$">
+            <input class="form__input" type="number" name="user__phone" placeholder="Ваш телефон"
+              data-reg="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$">
           </div>
           <div class="form__inner">
             <div class="form__select-wrapper">
@@ -374,16 +376,22 @@
                   <option disabled selected hidden class="form__option">Например: Минская</option>
                   <option>Минская</option>
                   <option>Бресткая</option>
+                  <option>Гродненская</option>
+                  <option>Витебская</option>
+                  <option>Могилевская</option>
                   <option>Гомельская</option>
                 </select>
               </div>
               <div class="form__select">
                 <h2 class="form__select-title">Укажите город</h2>
                 <select class="form__select-select">
-                  <option>Мозырь</option>
-                  <option>Минская</option>
-                  <option>Бресткая</option>
-                  <option>Гомельская</option>
+                  <option>Минск</option>
+                  <option>Гомель</option>
+                  <option>Витебск</option>
+                  <option>Гродно</option>
+                  <option>Брест</option>
+                  <option>Бобруйск</option>
+                  <option>Барановичи</option>
                 </select>
               </div>
             </div>
@@ -429,13 +437,13 @@
             </div>
           </div>
           <div class="form__offer">
-            <div class="form__timer">05:37:25</div>
+            <p class="form__timer"></p>
             <div class="form__button">
-              <button type="button" name="order">Заказать со скидкой</button>
+              <button type="submit" name="order">Заказать со скидкой</button>
             </div>
             <div class="form__accept">
-              <input type="checkbox" id="form__accept-checkbox">
-              <label class="form__accept-checkbox" for="form__accept-checkbox">Даю согласие на обработку
+              <input class="form__accept-checkbox" type="checkbox" id="form__accept-checkbox">
+              <label class="form__accept-label" for="form__accept-checkbox">Даю согласие на обработку
                 данных</label>
             </div>
           </div>
@@ -494,6 +502,8 @@
   <script src="./js/reviews.js"></script>
   <script src="./js/extraServices.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/timer.js"></script>
+  <script src="./js/form.js"></script>
 </body>
 
 </html>
