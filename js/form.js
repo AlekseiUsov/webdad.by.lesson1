@@ -3,14 +3,15 @@ const selectsBlock = document.querySelector('.form__select-wrapper');
 
 const inputs = document.querySelectorAll('.form__input');
 const inputBlock = document.querySelector('.form__inputs');
+const inputHidden = document.querySelector('.form__input-hidden');
 
 const formbutton = document.querySelector('.form__button');
 const accept = document.querySelector('.form__accept');
 const acceptInput = document.querySelector('.form__accept-checkbox');
 
+
 const toggeleSelect = (event) => {
     const el = event.target.closest('.form__select');
-    console.log(el)
 
     for (let i = 0; i < selects.length; i += 1) {
         if (selects[i] === el) {
@@ -23,7 +24,6 @@ const inputCheck = (el) => {
     const inputValue = el.value;
     const inputReg = el.getAttribute('data-reg');
     const reg = new RegExp(inputReg);
-    console.log(reg.test(inputValue))
     if (!reg.test(inputValue)) {
         el.classList.remove('form__input-valid')
         el.classList.add('form__input-invalid')
@@ -60,6 +60,29 @@ const buttonHandler = (event) => {
 }
 
 
+
+const showInput = (event) => {
+    const option = event.target;
+    if (option.value === 'last') {
+        inputHidden.classList.remove('form__input-hidden');
+    } else {
+        inputHidden.classList.add('form__input-hidden');
+    }
+}
+
+const addOptionInSelect = (event) => {
+    event.preventDefault();
+    let value = event.target.value;
+    const newOption = document.createElement('option');
+    newOption.innerHTML = value;
+    inputHidden.value = '';
+    const list = document.querySelector('#form__select-citys');
+    list.add(newOption, list.options[list.length - 1])
+    inputHidden.classList.add('form__input-hidden');
+}
+
 selectsBlock.addEventListener('click', toggeleSelect);
+selectsBlock.addEventListener('click', showInput);
+inputHidden.addEventListener('change', addOptionInSelect);
 inputBlock.addEventListener('input', inputHandler);
 formbutton.addEventListener('click', buttonHandler)

@@ -384,7 +384,7 @@
               </div>
               <div class="form__select">
                 <h2 class="form__select-title">Укажите город</h2>
-                <select class="form__select-select">
+                <select class="form__select-select" id="form__select-citys">
                   <option>Минск</option>
                   <option>Гомель</option>
                   <option>Витебск</option>
@@ -392,9 +392,12 @@
                   <option>Брест</option>
                   <option>Бобруйск</option>
                   <option>Барановичи</option>
+                  <option value="last">Добавить город</option>
                 </select>
               </div>
             </div>
+            <input class="form__input-addCity form__input-hidden" type="text" placeholder="Добавьте ваш город" value=""
+              data-reg="^[а-яА-Я][а-яА-Я0-9-_\.]{1,20}$">
             <div class="form__radios">
               <h2 class="form__radios-title">Способ оплаты</h2>
               <div class="form__radio">
