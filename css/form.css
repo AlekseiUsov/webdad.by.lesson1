@@ -358,7 +358,7 @@
     }
 
     .form__checkbox input[type=checkbox]:checked+label::before {
-        background-image: url(/img/чекбокс__галочка.svg);
+        background-image: url("./img/чекбокс__галочка.svg");
         background-repeat: no-repeat;
         background-position: center center;
         border: 1px solid #FED100;
