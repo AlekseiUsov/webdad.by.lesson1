@@ -9,7 +9,9 @@
 .reviews__block {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     gap: 1rem;
+    padding-bottom: 2rem;
 }
 
 .reviews__review {
@@ -47,9 +49,38 @@
     line-height: 1.5rem;
 }
 
+.reviews__wrapper-text p:first-child {
+    display: block;
+}
+
+.reviews__wrapper-text p:last-child {
+    display: none;
+}
+
+.reviews__wrapper-text-active p:first-child {
+    display: none;
+}
+
+.reviews__wrapper-text-active p:last-child {
+    display: block;
+}
+
 .reviews__view--all {
     padding-top: 1rem;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.reviews__view--all span:last-child {
+    display: none;
+}
+
+.reviews__view--all-active span:first-child {
+    display: none;
+}
+
+.reviews__view--all-active span:last-child {
+    display: block;
 }
 
 .reviews__button {
@@ -91,6 +122,7 @@
 
         .reviews__block {
             padding-top: 4rem;
+            overflow-x: hidden;
         }
 
         .reviews__review {

@@ -1,8 +1,9 @@
 .banner {
     background-color: var(--yellow);
+    padding-top: 3.5rem;
 }
 
-.content__benner {
+.banner__content {
     padding-bottom: 2rem;
 }
 
@@ -52,7 +53,6 @@
     padding: 1rem 2rem;
     line-height: 1rem;
     cursor: pointer;
-
 }
 
 
@@ -112,9 +112,9 @@
             display: none;
         }
 
-        .content__benner {
+        .banner__content {
             display: flex;
-            padding-bottom: 0;
+            padding: 4rem 0 0 0;
         }
 
         .banner__inner {

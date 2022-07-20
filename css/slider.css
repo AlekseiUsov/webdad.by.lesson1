@@ -1,74 +1,87 @@
-.fleet__content {
+.slider__content {
     padding: 3.5rem 0 3rem;
 }
 
-.fleet__title {
+.slider__title {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.6rem;
     text-align: center;
 }
 
-.fleet__title--thin {
+.slider__title--thin {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.1rem;
     text-align: center;
 }
 
-.fleet__options {
+.slider__options {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.fleet__option--active {
+.slider__options-wrapper {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.slider__option-active {
+    transition: 0.5s;
     text-decoration: underline;
     text-decoration-color: var(--yellow);
 }
 
-.fleet__slides {
+.slider__slides {
     padding-top: 1.5rem;
 }
 
-.fleet__slide {
+.slider__slide {
+    display: none;
+}
+
+.slider__slide-active {
+    transition: 0.5s;
     display: block;
     width: 100%;
-    max-width: 30rem;
     margin: 0 auto;
 }
 
-.fleet__slide img {
+.slider__image {
+    max-width: 30rem;
+    height: 19.5rem;
+}
+
+.slider__image img {
     width: 100%;
-    height: 100%;
+    object-fit: contain;
 }
 
-.fleet__specifications {
+.slider__inner {
     display: none;
 }
 
-.fleet__descriptions {
-    padding-top: 0.5rem;
+.slider__description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
 }
 
-.fleet__description {
-    display: none;
-}
-
-.fleet__description--active {
-    display: flex;
-    justify-content: center;
-}
-
-.fleet__circles {
+.slider__circles {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.fleet__circle {
+.slider__circles-wrapper {
+    gap: 1rem;
+    display: inline-flex;
+}
+
+.slider__circle {
     position: relative;
     border-radius: 50%;
     width: 0.5rem;
@@ -76,11 +89,13 @@
     background-color: var(--light-black);
 }
 
-.fleet__circle--active {
+.slider__circle--active {
+    transition: 0.5s;
     position: relative;
 }
 
-.fleet__circle--active::before {
+.slider__circle--active::before {
+    transition: 0.5s;
     content: '';
     position: absolute;
     width: 1rem;
@@ -92,13 +107,13 @@
     border: 2px solid #FED100;
 }
 
-.fleet__button {
+.slider__button {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
 
-.fleet__button button {
+.slider__button button {
     width: 18rem;
     background-color: var(--yellow);
     font-size: 1.1rem;
@@ -110,90 +125,115 @@
 }
 
 @media (min-width: 768px) {
-    .fleet__content {
+    .slider__content {
         padding: 5rem 0;
     }
 
-    .fleet__title {
+    .slider__title {
         font-size: 2rem;
         line-height: 2.3rem;
     }
 
-    .fleet__title--thin {
+    .slider__title--thin {
         font-size: 1.5rem;
         line-height: 2rem;
     }
 
-    .fleet__options {
+    .slider__options {
         padding-top: 3rem;
         gap: 4.5rem;
     }
 
-    .fleet__option {
+    .slider__option {
         font-size: 1.5rem;
     }
 
-    .fleet__description {
+    .slider__description {
         font-size: 1.2rem;
         font-weight: 400;
     }
 
     @media (min-width: 1300px) {
-        .fleet__option {
+        .slider__option {
             padding: 0.5rem 2rem;
             border: 1px solid #EBEBEB;
             font-size: 1.2rem;
         }
 
-        .fleet__option--active {
+        .slider__option--active {
             border: 1px solid #FED100;
             text-decoration: none;
         }
 
-        .fleet__block {
+        .slider__slides {
             position: relative;
             padding-top: 3rem;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            gap: 5rem;
         }
 
-
-        .fleet__block::before {
+        .slider__prev {
             content: url("/img/стрелочка_влево.svg");
-            position: absolute;
             display: block;
-            width: 1rem;
-            height: 1rem;
+            position: absolute;
+            top: 50%;
             left: 0;
-            bottom: 45%;
-            transform: translate(-50%, -50%);
-        }
-
-        .fleet__block::after {
-            content: url("/img/стрелочка_вправо.svg");
-            position: absolute;
-            display: block;
             width: 1rem;
             height: 1rem;
-            right: 0;
-            bottom: 45%;
             transform: translate(-50%, -50%);
         }
 
-        .fleet__specifications {
-            display: block;
+        .slider__prev:hover {
+            opacity: 0.7;
         }
 
-        .fleet__subtitle {
+        .slider__next {
+            content: url("/img/стрелочка_вправо.svg");
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            transform: translate(-50%, -50%);
+        }
+
+        .slider__next:hover {
+            opacity: 0.7;
+        }
+
+        .slider__slide {
+            margin: 0;
+        }
+
+        .slider__slide-active {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5rem;
+            flex-direction: row-reverse;
+        }
+
+        .slider__inner {
+            display: block;
+            flex-basis: 0 0 49%;
+        }
+
+        .slider__image {
+            margin: 0;
+            flex-basis: 0 0 49%;
+        }
+
+        .slider__description {
+            display: none;
+        }
+
+        .slider__subtitle {
             padding: 2rem 0 1rem;
             font-size: 1.5rem;
             line-height: 2rem;
             font-weight: 600;
         }
 
-        .fleet__text {
+        .slider__text {
             position: relative;
             padding: 1rem 0 0 1.5rem;
             font-size: 1rem;
@@ -201,7 +241,7 @@
             line-height: 1.3rem;
         }
 
-        .fleet__text::before {
+        .slider__text::before {
             display: block;
             width: 1rem;
             height: 1rem;
@@ -212,19 +252,12 @@
             transform: translate(-50%, -50%);
         }
 
-        .fleet__descriptions {
+        .slider__circles {
             display: none;
         }
 
-        .fleet__circles {
-            display: none;
-        }
-
-        .fleet__slide {
-            margin: 0;
-        }
-
-        .fleet__button {
+        .slider__button {
+            margin-left: 5rem;
             justify-content: flex-start;
         }
     }

@@ -1,0 +1,415 @@
+.form__content {
+    padding: 2.5rem 0 2.8rem;
+}
+
+.form__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.form__subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.form__inner {
+    display: none;
+}
+
+
+.form__input {
+    width: 100%;
+    display: block;
+    padding: 2rem 0 1rem 0;
+    border-bottom: 1px solid #3333;
+}
+
+.form__input-addCity {
+    width: calc(50% - 1rem);
+    margin-left: calc(50% + 1rem);
+    display: block;
+    padding: 2rem 0 1rem 0;
+    border-bottom: 1px solid #3333;
+}
+
+.form__input-hidden {
+    display: none;
+}
+
+.form__input-valid {
+    transition: 1s;
+    border-bottom: 2px solid rgb(48, 221, 48);
+}
+
+.form__input-invalid {
+    transition: 1s;
+    border-bottom: 2px solid rgb(205, 19, 19);
+}
+
+.form__timer {
+    display: none;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 0;
+    width: 17.5rem;
+    background-color: var(--red);
+}
+
+.form__button button {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    line-height: 1rem;
+    cursor: pointer;
+}
+
+.form__accept {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form__accept input {
+    appearance: none;
+}
+
+.form__accept label {
+    margin-left: 1.5rem;
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.form__accept label::after {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    border: 1px solid #333;
+}
+
+.form__accept input[type=checkbox]:hover+label::after {
+    box-shadow: 1px 1px 1px 1px #333;
+}
+
+.form__accept input[type=checkbox]:checked+label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    left: -1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 3s;
+    border-radius: 10%;
+    background-color: #333;
+}
+
+.form__accept-invalid label {
+    color: rgb(205, 19, 19);
+}
+
+.form__accept-invalid input[type=checkbox]:checked+label::after {
+    transition: 1s;
+    border: 1px solid #333;
+}
+
+.form__accept-invalid input[type=checkbox]:checked+label {
+    color: #333;
+}
+
+.form__accept-invalid input[type=checkbox]+label::after {
+    transition: 1s;
+    border: 1px solid rgb(205, 19, 19);
+}
+
+
+@media (min-width: 768px) {
+    .form__content {
+        padding: 5rem 0;
+    }
+
+    .form__inner {
+        display: block;
+    }
+
+    .form__inputs {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .form__select-wrapper {
+        padding-top: 2rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .form__select-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
+    .form__select {
+        position: relative;
+        display: block;
+        width: 100%;
+        background: none;
+        border-bottom: 1px solid #3333;
+    }
+
+    .form__select select {
+        appearance: none;
+        width: 100%;
+        padding: 1.25rem 0;
+        cursor: pointer;
+        border-color: rgba(51, 51, 51, 0.4);
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    .form__select::after {
+        position: absolute;
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        content: '';
+        top: 70%;
+        right: 0;
+        transition: 0.5s;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0.5rem 0.5rem 0 0.5rem;
+        border-color: #3333 transparent transparent transparent;
+    }
+
+    .form__select-active.form__select::after {
+        transform: rotate(180deg);
+    }
+
+    .form__radios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 3.75rem 0;
+    }
+
+    .form__radios-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        padding-bottom: 2rem;
+        flex-basis: 100%;
+    }
+
+    .form__radio input[type=radio] {
+        appearance: none;
+    }
+
+    .form__radio label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+    }
+
+    .form__radio label:before {
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 1px solid #3333;
+    }
+
+    .form__radio label:after {
+        content: "";
+        display: block;
+        width: 0.9rem;
+        height: 0.9rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+        border-radius: 50%;
+        opacity: 0;
+        background-color: var(--yellow);
+    }
+
+    .form__radio input[type=radio]:hover+label::before {
+        border: 1px solid #FED100;
+    }
+
+    .form__radio input[type=radio]:checked+label::before {
+        border: 1px solid #FED100;
+    }
+
+    .form__radio input[type=radio]:checked+label::after {
+        opacity: 1;
+    }
+
+    .form__checkboxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 0 0 2.25rem;
+    }
+
+    .form__checkbox-hidden {
+        display: none;
+    }
+
+    .form__checkboxes-title-wrapper {
+        flex-basis: 100%;
+        display: flex;
+    }
+
+    .form__checkboxes-title {
+        display: inline-block;
+        position: relative;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .form__checkboxes-title::after {
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        content: '';
+        position: absolute;
+        top: 17.5%;
+        right: -2rem;
+        transition: 0.5s;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0.5rem 0.5rem 0 0.5rem;
+        border-color: #3333 transparent transparent transparent;
+    }
+
+    .form__checkboxes-title:hover.form__checkboxes-title::after {
+        border-color: rgba(15, 14, 14, 0.5) transparent transparent transparent;
+    }
+
+
+    .form__checkboxes-title.form__checkboxes-title-active::after {
+        transform: rotate(-180deg);
+    }
+
+    .form__checkbox input[type=checkbox] {
+        appearance: none;
+    }
+
+    .form__checkbox label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+    }
+
+    .form__checkbox label:before {
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.1ss;
+        border-radius: 10%;
+        border: 1px solid #3333;
+    }
+
+    .form__checkbox input[type=checkbox]:hover+label::before {
+        border: 1px solid #FED100;
+    }
+
+    .form__checkbox input[type=checkbox]:checked+label::before {
+        background-image: url(/img/чекбокс__галочка.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid #FED100;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .form__content {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .form__title {
+        text-align: start;
+    }
+
+    .form__subtitle {
+        text-align: start;
+    }
+
+    .form__title::after {
+        content: ' со скидкой %';
+    }
+
+    .form__offer {
+        display: grid;
+        grid-template-areas: "timer button"
+            "timer form__accept";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+
+    .form__timer {
+        grid-area: timer;
+        font-size: 5.5rem;
+        font-weight: 400;
+        display: block;
+    }
+
+    .form__accept {
+        justify-content: start;
+    }
+
+    .form__button {
+        margin: 0;
+        grid-area: button;
+    }
+
+    .form__accept {
+        grid-area: form__accept;
+    }
+}
