@@ -171,7 +171,7 @@
         }
 
         .slider__prev {
-            content: url('/img/стрелочка_влево.svg');
+            content: url('../img/стрелочка_влево.svg');
             display: block;
             position: absolute;
             top: 50%;
@@ -186,7 +186,7 @@
         }
 
         .slider__next {
-            content: url('/img/стрелочка_вправо.svg');
+            content: url('../img/стрелочка_вправо.svg');
             display: block;
             position: absolute;
             top: 50%;
@@ -246,7 +246,7 @@
             width: 1rem;
             height: 1rem;
             position: absolute;
-            content: url("/img/галочка_в_автопарке.svg");
+            content: url("../img/галочка_в_автопарке.svg");
             left: 0;
             bottom: 0;
             transform: translate(-50%, -50%);
