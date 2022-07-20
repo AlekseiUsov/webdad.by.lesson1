@@ -171,7 +171,7 @@
         }
 
         .slider__prev {
-            content: url("/img/стрелочка_влево.svg");
+            content: url("./img/стрелочка_влево.svg");
             display: block;
             position: absolute;
             top: 50%;
@@ -186,7 +186,7 @@
         }
 
         .slider__next {
-            content: url("/img/стрелочка_вправо.svg");
+            content: url("./img/стрелочка_вправо.svg");
             display: block;
             position: absolute;
             top: 50%;
