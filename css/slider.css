@@ -52,6 +52,7 @@
 .slider__image {
     max-width: 30rem;
     height: 19.5rem;
+    margin: 0 auto;
 }
 
 .slider__image img {
